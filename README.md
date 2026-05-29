@@ -1,6 +1,6 @@
 <div align="center">
 
-# CaptionFormer: Unified Segmentation, Tracking, and Captioning for Spatio-Temporal Objects
+# [CVPR26] CaptionFormer: Unified Segmentation, Tracking, and Captioning for Spatio-Temporal Objects
 
 <a href="http://www.gabriel.fiastre.fr/"><strong>Gabriel Fiastre</strong></a>
 ·
@@ -16,3 +16,17 @@
 
 
 ## Code Coming soon
+
+</div>
+
+## Citation
+If you use this work, please cite:
+
+```bibtex
+@inproceedings{fiastre2026captionformer,
+  title     = {CaptionFormer: Learning to Jointly Segment and Caption Object Trajectories in Videos},
+  author    = {Gabriel Fiastre and Antoine Yang and Cordelia Schmid},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026}
+}
+```
