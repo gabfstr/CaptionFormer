@@ -1,6 +1,6 @@
 <div align="center">
 
-# [CVPR26] CaptionFormer: Unified Segmentation, Tracking, and Captioning for Spatio-Temporal Objects
+# CaptionFormer: Unified Segmentation, Tracking, and Captioning for Spatio-Temporal Objects (CVPR 2026)
 
 <a href="http://www.gabriel.fiastre.fr/"><strong>Gabriel Fiastre</strong></a>
 ·
@@ -12,10 +12,10 @@
 [![Static Badge](https://img.shields.io/badge/Project-Page-388E6A?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPgo8c3ZnIHdpZHRoPSI4MDBweCIgaGVpZ2h0PSI4MDBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBjb2xvcj0iIzM4OEU2QSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgNkMzIDQuMzQzMTUgNC4zNDMxNSAzIDYgM0gxNEMxNS42NTY5IDMgMTcgNC4zNDMxNSAxNyA2VjE0QzE3IDE1LjY1NjkgMTUuNjU2OSAxNyAxNCAxN0g2QzQuMzQzMTUgMTcgMyAxNS42NTY5IDMgMTRWNloiIHN0cm9rZT0iIzM4OEU2QSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTIxIDdWMThDMjEgMTkuNjU2OSAxOS42NTY5IDIxIDE4IDIxSDciIHN0cm9rZT0iIzM4OEU2QSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTkgMTJWOEwxMi4xNDI5IDEwTDkgMTJaIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMzODhFNkEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8%2BCjwvc3ZnPg%3D%3D&logoColor=red)](https://www.gabriel.fiastre.fr/captionformer/)
 [![Static Badge](https://img.shields.io/badge/Scholar-CaptionFormer-3E7DFF?logo=google%20scholar&logoColor=%235D8EF6&link=https%3A%2F%2Fwww.gabriel.fiastre.fr%2Fcaptionformer%2F)](https://scholar.google.com/scholar?as_sdt=0%2C5&q=MaskCaptioner%3A+Learning+to+Jointly+Segment+and+Caption+Object+Trajectories+in+Videos&btnG=)
 
-![example_microscope](https://github.com/user-attachments/assets/b7f2a7e4-2812-4e26-98e8-fe36ac7ef10f)
+<img width="1370" height="466" alt="microscope_example_cropped" src="https://github.com/user-attachments/assets/c5bd0c62-0552-4d2c-ae09-3edc2f0d3d8d" />
 
 
-## Code Coming soon
+## Code coming (very) soon
 
 </div>
 
