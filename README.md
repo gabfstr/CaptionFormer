@@ -10,7 +10,7 @@
 
 [![Static Badge](https://img.shields.io/badge/arXiv-CaptionFormer-A42C25?logo=arXiv&logoColor=red)](https://arxiv.org/abs/2510.14904)
 [![Static Badge](https://img.shields.io/badge/Project-Page-388E6A?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPgo8c3ZnIHdpZHRoPSI4MDBweCIgaGVpZ2h0PSI4MDBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBjb2xvcj0iIzM4OEU2QSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgNkMzIDQuMzQzMTUgNC4zNDMxNSAzIDYgM0gxNEMxNS42NTY5IDMgMTcgNC4zNDMxNSAxNyA2VjE0QzE3IDE1LjY1NjkgMTUuNjU2OSAxNyAxNCAxN0g2QzQuMzQzMTUgMTcgMyAxNS42NTY5IDMgMTRWNloiIHN0cm9rZT0iIzM4OEU2QSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTIxIDdWMThDMjEgMTkuNjU2OSAxOS42NTY5IDIxIDE4IDIxSDciIHN0cm9rZT0iIzM4OEU2QSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTkgMTJWOEwxMi4xNDI5IDEwTDkgMTJaIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMzODhFNkEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8%2BCjwvc3ZnPg%3D%3D&logoColor=red)](https://www.gabriel.fiastre.fr/captionformer/)
-[![Static Badge](https://img.shields.io/badge/Scholar-CaptionFormer-3E7DFF?logo=google%20scholar&logoColor=%235D8EF6&link=https%3A%2F%2Fwww.gabriel.fiastre.fr%2Fcaptionformer%2F)](https://scholar.google.com/scholar?as_sdt=0%2C5&q=MaskCaptioner%3A+Learning+to+Jointly+Segment+and+Caption+Object+Trajectories+in+Videos&btnG=)
+[![Static Badge](https://img.shields.io/badge/Scholar-CaptionFormer-3E7DFF?logo=google%20scholar&logoColor=%235D8EF6&link=https%3A%2F%2Fwww.gabriel.fiastre.fr%2Fcaptionformer%2F)](https://scholar.google.com/scholar?as_sdt=0%2C5&q=CaptionFormer%3A+Unified+Segmentation%2C+Tracking%2C+and+Captioning+for+Spatio-Temporal+Objects&btnG=)
 
 <img width="1200" height="384" alt="Enregistrement de l’écran 2026-06-04 à 06 06 03-2" src="https://github.com/user-attachments/assets/916f6aa0-83a6-4f4f-af29-33d4478476ec" />
 
@@ -19,12 +19,12 @@
 ## 📖 Table of Contents
 
 [[Datasets](#-datasets--lviscap--lv-viscap)] 
-[[Code](#code-coming-very-soon)] 
-[[Cite](#citation)]
+[[Code](#-code--captionformer)] 
+[[Cite](#-citation)]
 
 ## 📚 Datasets — LVIScap & LV-VIScap
 
-We release our **LVIScap** and **LV-VIScap** synthetic datasets used to train the CaptionFormer DVOC model. For more details on the synthetic caption generation, please check out the [paper](https://arxiv.org/abs/2510.14904).
+We release our **LVIScap** and **LV-VIScap** synthetic datasets used to train the CaptionFormer model for Dense Video Object Captioning (DVOC). For more details on the synthetic caption generation, please check out the [paper](https://arxiv.org/abs/2510.14904).
 
 ⚡ **Download both annotation files** from the [Google Drive folder](https://drive.google.com/drive/folders/1qFNx7AWeXmjJ8aGiFqeO3SMoOCe6ga0D?usp=share_link).
 
@@ -139,29 +139,56 @@ are new on each track annotation:
 - LVIScap & LV-VIScap synthetic captions: [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/), generated with **Gemini 2.0 Flash**
 
 When using LVIScap or LV-VIScap, please cite the source dataset *and*
-CaptionFormer ([bibtex](#citation)).
+CaptionFormer ([bibtex](#-citation)).
 
-## Code coming (very) soon
+## 📎 Code — CaptionFormer
 
-Full code release — training, eval, demo, and
-tools — is on its way. Star the repo and watch for updates. 
+### Installation
+
+See [`INSTALL.md`](INSTALL.md).
+
+### Data preparation
+
+See [`DATA_PREPARATION.md`](DATA_PREPARATION.md).
+
+### Checkpoints & evaluation scripts
+
+Download the checkpoints from the [Google Drive folder](https://drive.google.com/drive/folders/11E86QHJW7tJw8AvlZAUEdsWs_A3DpJ7l?usp=sharing), drop them under `models/`, and run the matching eval script.
+
+| Eval set            | Checkpoint                     | Script                                     | CHOTA |
+|------------------|--------------------------------|--------------------------------------------|------:|
+| LV-VIScap (ours) | `ckpt_lviscap_lvviscap.pth`    | [`scripts/eval/eval_lvvis.sh`](scripts/eval/eval_lvvis.sh)               |     59.5 |
+| VidSTG           | `ckpt_vidstg_no_tempagg.pth`   | [`scripts/eval/eval_vidstg_no_tempagg.sh`](scripts/eval/eval_vidstg_no_tempagg.sh)   |     62.3 |
+| VidSTG (tempagg) | `ckpt_vidstg_tempagg.pth`      | [`scripts/eval/eval_vidstg_tempagg.sh`](scripts/eval/eval_vidstg_tempagg.sh)      |     64.0 |
+| VLN              | `ckpt_vln.pth`                 | [`scripts/eval/eval_vln.sh`](scripts/eval/eval_vln.sh)                 |     47.7 |
+| BenSMOT          | `ckpt_bensmot.pth`             | [`scripts/eval/eval_bensmot.sh`](scripts/eval/eval_bensmot.sh)             |     N/A* |
+
+*CHOTA not computed for BenSMOT (CIDEr only variant)
+
+<!-- `ckpt_lviscap_coco_lvviscap_pretrain.pth` is the pre-training checkpoint used as init for the VidSTG fine-tuning reproduction. -->
 
 ### Status
 - [x] Dataset release (LVIScap & LV-VIScap)
-- [ ] Environment setup & data preparation instructions
-- [ ] Training and evaluation code
-- [ ] Pretrained checkpoints
+- [x] Environment setup & data preparation instructions
+- [x] Pretrained checkpoints
+- [x] Evaluation scripts
+- [ ] Training scripts 
 - [ ] Demo
 
-## Citation
+## 📋 Citation
 
 If you use this work, please cite:
 
 ```bibtex
 @inproceedings{fiastre2026captionformer,
-  title     = {CaptionFormer: Learning to Jointly Segment and Caption Object Trajectories in Videos},
+  title     = {CaptionFormer: Unified Segmentation, Tracking, and Captioning for Spatio-Temporal Objects},
   author    = {Gabriel Fiastre and Antoine Yang and Cordelia Schmid},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year      = {2026}
 }
 ```
+
+
+## Acknowledgements
+
+The code is largely based on [OVFormer](https://github.com/fanghaook/OVFormer), [Mask2Former](https://github.com/facebookresearch/Mask2Former), [detectron2](https://github.com/facebookresearch/detectron2) and [LVVIS](https://github.com/haochenheheda/LVVIS). Thanks for their excellent work!

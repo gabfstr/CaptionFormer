@@ -1,0 +1,45 @@
+_BASE_: "../_base.yaml"
+
+DATALOADER:
+  NUM_WORKERS: 8
+DATASETS:
+  TEST:
+  - bensmot_val
+MODEL:
+  CAPTIONING_HEAD:
+    AGGREGATION_METHOD: weighted mean
+    AGGREGATION_NUM_T: 8
+    FEATURE_MAPPING: bensmot
+    MAX_TXT_LEN: 200
+  MASK_FORMER:
+    BOX_MODE_ON: true
+    BOX_ONLY: true
+    CAPTIONING_MAX_OUT_LEN: 200
+    CLIP_CLASSIFIER: false
+    CLIP_IMAGE_PATH: datasets/metadata/lvvis_val_clip_feature.pkl
+    CLIP_TEXT_PATH: datasets/metadata/fg_bg_5_10_lvvis_ens.npy
+    INFERENCE_CLIP_LEN: 1
+    MULTI_FRAME_CAPTIONING: true
+    TOPK_MATCHING: true
+    TOPK_MATCHING_NUM_K: 7
+    TOPK_MATCHING_NUM_T: 40
+    USE_BOXES: true
+    USE_MASKS: false
+    HYSTERESIS_FILTER:
+      ENABLED: true
+      T_LOW: 0.3
+      T_HIGH: 0.8
+      MIN_DURATION: 5
+  SEM_SEG_HEAD:
+    IN_FEATURES:
+    - res3
+    - res4
+    - res5
+    NUM_CLASSES: 1
+  SWIN:
+    OUT_FEATURES:
+    - res3
+    - res4
+    - res5
+  WEIGHTS: ./models/ckpt_bensmot.pth
+OUTPUT_DIR: ./outputs/eval/bensmot/

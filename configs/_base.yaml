@@ -1,0 +1,50 @@
+INPUT:
+  FORMAT: RGB
+  MIN_SIZE_TEST: 480
+MODEL:
+  BACKBONE:
+    NAME: D2SwinTransformer
+  CAPTIONING_HEAD:
+    SAVED_FEATURES: false
+  MASK_FORMER:
+    CAPTIONING_HEAD_NAME: Blip2OPTVideo
+    DEC_LAYERS: 10
+    DVOC_INFERENCE: true
+    MASK_CAPTIONING: true
+    TEST:
+      INSTANCE_ON: true
+      OBJECT_MASK_THRESHOLD: 0.8
+      OVERLAP_THRESHOLD: 0.8
+      SEMANTIC_ON: false
+    TRANSFORMER_DECODER_NAME: VideoMultiScaleMaskedTransformerDecoder
+    TRANSFORMER_IN_FEATURE: multi_scale_pixel_decoder
+  META_ARCHITECTURE: VideoCaptionFormer
+  PIXEL_MEAN:
+  - 123.675
+  - 116.28
+  - 103.53
+  PIXEL_STD:
+  - 58.395
+  - 57.12
+  - 57.375
+  SEM_SEG_HEAD:
+    CONVS_DIM: 256
+    NAME: MaskFormerHead
+    PIXEL_DECODER_NAME: MSDeformAttnPixelDecoder
+    TRANSFORMER_ENC_LAYERS: 6
+  SWIN:
+    DEPTHS:
+    - 2
+    - 2
+    - 18
+    - 2
+    EMBED_DIM: 128
+    NUM_HEADS:
+    - 4
+    - 8
+    - 16
+    - 32
+    PRETRAIN_IMG_SIZE: 384
+    WINDOW_SIZE: 12
+TEST:
+  DETECTIONS_PER_IMAGE: 50

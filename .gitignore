@@ -1,0 +1,58 @@
+# output dir
+output*
+
+*.json
+*.diff
+*.jpg
+!/projects/DensePose/doc/images/*.jpg
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.pyd
+*.so
+*.dll
+*.egg-info/
+build/
+dist/
+wheels/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+*.ts
+model_ts*.txt
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# editor settings
+.idea
+.vscode
+_darcs
+
+# project dirs
+/detectron2/model_zoo/configs
+/datasets/*
+!/datasets/*.*
+/projects/*/datasets
+/models
+/snippet
+
+detectron2
+
+# CaptionFormer: track small intentional data files that the rules above ignore.
+# Big binaries (pretrained backbones, precomputed CLIP feature .pkl) stay ignored.
+!datasets/metadata/
+!datasets/metadata/*.json
+!datasets/metadata/*.npy
+!tools/build_coco_plus_lvis/*.json

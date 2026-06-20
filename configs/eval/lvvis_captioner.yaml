@@ -1,0 +1,34 @@
+_BASE_: "../_base.yaml"
+
+DATALOADER:
+  NUM_WORKERS: 64
+DATASETS:
+  TEST:
+  - lvviscap_val
+MODEL:
+  CAPTIONING_HEAD:
+    FEATURE_MAPPING: lvvis
+    MAX_TXT_LEN: 32
+  MASK_FORMER:
+    BOX_MODE_ON: false
+    CLIP_CLASSIFIER: true
+    CLIP_IMAGE_PATH: datasets/metadata/lvvis_val_clip_feature.pkl
+    CLIP_TEXT_PATH: datasets/metadata/fg_bg_5_10_lvvis_ens.npy
+    INFERENCE_CLIP_LEN: 5
+    # No hysteresis for LVVIS; just a per-frame score threshold (0.5)
+    PER_FRAME_SCORE_THRESHOLD: 0.5
+  SEM_SEG_HEAD:
+    IN_FEATURES:
+    - res2
+    - res3
+    - res4
+    - res5
+    NUM_CLASSES: 1196
+  SWIN:
+    OUT_FEATURES:
+    - res2
+    - res3
+    - res4
+    - res5
+  WEIGHTS: ./models/ckpt_lviscap_lvviscap.pth
+OUTPUT_DIR: ./outputs/eval/lvvis_captioner/

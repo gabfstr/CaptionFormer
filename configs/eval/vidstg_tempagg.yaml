@@ -1,0 +1,45 @@
+_BASE_: "../_base.yaml"
+
+DATALOADER:
+  NUM_WORKERS: 32
+DATASETS:
+  TEST:
+  - vidstg_max200f_val
+MODEL:
+  CAPTIONING_HEAD:
+    AGGREGATION_METHOD: weighted mean
+    AGGREGATION_NUM_T: 32
+    FEATURE_MAPPING: vidstg
+    MAX_TXT_LEN: 32
+  MASK_FORMER:
+    BOX_MODE_ON: true
+    BOX_ONLY: true
+    CAPTIONING_MAX_OUT_LEN: 30
+    CLIP_CLASSIFIER: true
+    CLIP_IMAGE_PATH: datasets/metadata/vidstg_val_clip_feature.pkl
+    CLIP_TEXT_PATH: datasets/metadata/fg_bg_5_10_vidstg_ens.npy
+    INFERENCE_CLIP_LEN: 1
+    MULTI_FRAME_CAPTIONING: true
+    HYSTERESIS_FILTER:
+      ENABLED: true
+      T_LOW: 0.4
+      T_HIGH: 0.85
+      MIN_DURATION: 3
+    TOPK_MATCHING: true
+    TOPK_MATCHING_NUM_K: 7
+    TOPK_MATCHING_NUM_T: 100
+    USE_BOXES: true
+    USE_MASKS: false
+  SEM_SEG_HEAD:
+    IN_FEATURES:
+    - res3
+    - res4
+    - res5
+    NUM_CLASSES: 80
+  SWIN:
+    OUT_FEATURES:
+    - res3
+    - res4
+    - res5
+  WEIGHTS: ./models/ckpt_vidstg_tempagg.pth
+OUTPUT_DIR: ./outputs/eval/vidstg_tempagg/

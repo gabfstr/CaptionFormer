@@ -1,0 +1,14 @@
+opencv-python==4.8.0.74
+cython
+scipy
+shapely
+pillow<10
+einops
+ninja
+timm==0.5.4
+h5py
+submitit
+scikit-image
+transformers==4.28.1
+pycocoevalcap>=1.2
+wandb
